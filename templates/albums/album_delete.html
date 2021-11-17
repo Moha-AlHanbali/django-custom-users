@@ -1,0 +1,26 @@
+{% extends '_base.html' %}
+
+{% block title %}Delete {{album.title}} {% endblock title %}
+
+{% block content %}
+
+
+<a href="{{album.get_absolute_url}}">Back to {{album.title}}</a>
+
+
+<br><br>
+
+<form method="POST">
+    {% csrf_token %}
+<h4>Are you sure you want to delete {{album.title}}?</h4>
+
+<br><br>
+
+<input type="submit" value="Delete">
+</form>
+
+{% endblock content %}
+
+
+
+

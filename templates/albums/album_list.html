@@ -1,0 +1,13 @@
+{% extends '_base.html' %}
+
+{% block title %}Album List{% endblock title %}
+
+{% block content %}
+
+{% for album in album_list %}
+
+<h4> <a href="{{ album.get_absolute_url }}"> {{album.band}} - {{album.title}} </a></h4>
+
+{% endfor %}
+
+{% endblock content %}
