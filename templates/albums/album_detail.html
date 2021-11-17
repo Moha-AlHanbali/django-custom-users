@@ -1,0 +1,23 @@
+{% extends '_base.html' %}
+
+{% block title %}{{album_detail.title}}{% endblock title %}
+
+{% block content %}
+
+<br><br>
+<h5><a href="{% url 'album_update' album_detail.pk %}"> Modify album</a></h5>
+<h5><a href="{% url 'album_delete' album_detail.pk %}"> Delete album</a></h5>
+<br><br>
+
+
+<h3>{{album_detail.title}}</h3> 
+<br><br>
+<h5>by {{album_detail.author}}</h5>
+<h5>Rating: {{album_detail.rating}}</h5>
+<br><br>
+<h5>Artist: {{album_detail.band}}</h5>
+<h5>Album Release: {{album_detail.release_year}}</h5>
+<br><br>
+<h5>Review: {{album_detail.description}}</h5>
+
+{% endblock content %}

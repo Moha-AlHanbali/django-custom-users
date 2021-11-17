@@ -1,0 +1,29 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block title %}Home page{% endblock title %}
+
+{% block content %}
+<div>
+    <h1 >Album Reviews</h1>
+</div>
+
+
+<div style="padding-top: 100px;">
+    <h3>Featured Album Review</h3>
+
+    <h3>The Burning Halo</h3> 
+    <br><br>
+    <h5>by admin</h5>
+    <h5>Rating: 9</h5>
+    <br><br>
+    <h5>Artist: Draconian</h5>
+    <h5>Album Release: 2006</h5>
+    <br><br>
+    <img src="{% static 'images/Burning.jpg' %}" style="height: 500px">
+    <br><br>
+    <h5>Review: A hidden gem of Doom Metal. Sounds old but still as good as the day it was recorded.</h5>
+    <br><br>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,21 @@
+{% extends '_base.html' %}
+
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{% block title %}Create an Album{% endblock title %}
+
+{% block content %}
+
+<form method="POST">
+    {% csrf_token %}
+{% for field in form %}
+    {% bootstrap_field field %}
+{% endfor %}
+
+<br>
+
+<input type="submit" value="Post">
+</form>
+{% endblock content %}
